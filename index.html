@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Professor Wasim Faizi — Islamic Scholar | Wisdom</title>
-  <meta name="description" content="Professor Wasim Faizi — Islamic Scholar, Visiting University Professor, Motivational Speaker, Spiritual Mentor, and Host of Seerat e Mustaqeem." />
+  <title>Wisdom — Authentic Islamic Knowledge &amp; Guidance | حكمة</title>
+  <meta name="description" content="Wisdom (حكمة) — An authentic Islamic platform dedicated to spreading the divine message of the Quran and Sunnah through knowledge, reflection, and spiritual enlightenment." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -195,15 +195,14 @@
     .about-text { font-size:0.98rem; color:var(--text2); line-height:1.85; }
     .about-card { background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:1rem 1.25rem; border-left:3px solid var(--gold); box-shadow:var(--shadow); transition:background 0.35s ease; }
     .about-card p { font-size:0.88rem; color:var(--text2); line-height:1.7; font-style:italic; }
-    .about-card span { font-size:0.72rem; color:var(--gold); font-weight:600; display:block; margin-top:0.35rem; }
-    .scholar-credentials { display:grid; grid-template-columns:repeat(2,1fr); gap:0.65rem; margin:0.25rem 0; }
+    .pillars-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:0.65rem; margin:0.25rem 0; }
     .cred-item { background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:0.65rem 0.9rem; display:flex; align-items:center; justify-content:space-between; gap:0.5rem; box-shadow:0 2px 8px rgba(0,0,0,0.05); transition:all 0.25s ease; }
     .cred-item:hover { border-color:var(--gold-l); background:var(--bg-card-solid); transform:translateY(-2px); }
     .cred-en { font-size:0.84rem; font-weight:600; color:var(--text1); display:flex; align-items:center; gap:0.35rem; }
     .cred-en::before { content:'✦'; color:var(--gold); font-size:0.65rem; }
     .cred-ur { font-family:'Amiri',serif; font-size:0.95rem; color:var(--gold-d); direction:rtl; white-space:nowrap; }
     [data-theme="dark"] .cred-ur { color:var(--gold-l); }
-    @media (max-width:640px) { .scholar-credentials { grid-template-columns:1fr; } }
+    @media (max-width:640px) { .pillars-grid { grid-template-columns:1fr; } }
 
     /* ============================================================ AYAT */
     .ayat-section { padding:6rem 0; background:var(--bg-sec); position:relative; overflow:hidden; transition:background 0.35s ease; }
@@ -221,6 +220,55 @@
     .ayat-translation { font-style:italic; font-size:0.92rem; color:var(--text2); line-height:1.8; margin-bottom:1rem; }
     .ayat-ref { display:flex; align-items:center; gap:0.6rem; font-size:0.75rem; color:var(--gold); font-weight:600; letter-spacing:0.06em; }
     .ayat-ref-bar { width:18px; height:2px; background:var(--gold); border-radius:1px; flex-shrink:0; }
+
+    /* ============================================================ VIDEOS */
+    .videos-section { padding:6rem 0; background:var(--bg-page); position:relative; overflow:hidden; transition:background 0.35s ease; border-top:1px solid var(--border-subtle); }
+    .videos-header { text-align:center; margin-bottom:3.5rem; }
+    .videos-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.75rem; }
+    .video-card { background:var(--bg-card); border:1px solid var(--border); border-radius:20px; overflow:hidden; display:flex; flex-direction:column; box-shadow:var(--shadow); transition:all 0.4s ease; position:relative; }
+    .video-card:hover { transform:translateY(-7px); box-shadow:var(--shadow-lg); border-color:var(--gold-l); background:var(--bg-card-solid); }
+
+    .video-media-wrap { position:relative; width:100%; aspect-ratio:16/9; background:#0D1117; overflow:hidden; display:flex; align-items:center; justify-content:center; }
+    .video-media-wrap iframe { width:100%; height:100%; border:none; display:block; }
+
+    .video-thumb-preview { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:1.5rem; cursor:pointer; text-decoration:none; background-size:cover; background-position:center; transition:transform 0.4s ease; }
+    .video-thumb-preview:hover { transform:scale(1.02); }
+    .video-thumb-preview::before { content:''; position:absolute; inset:0; background:linear-gradient(180deg,rgba(13,17,23,0.35) 0%,rgba(13,17,23,0.85) 100%); transition:background 0.3s ease; }
+    .video-thumb-preview:hover::before { background:linear-gradient(180deg,rgba(13,17,23,0.2) 0%,rgba(13,17,23,0.75) 100%); }
+
+    .video-bg-yt { background:radial-gradient(ellipse at center, #350A0A 0%, #150505 100%); }
+    .video-bg-tt { background:radial-gradient(ellipse at center, #0F172A 0%, #06080F 100%); }
+    .video-bg-fb { background:radial-gradient(ellipse at center, #0A1E3D 0%, #050E1D 100%); }
+
+    .video-play-btn { position:relative; z-index:2; width:58px; height:58px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; box-shadow:0 8px 24px rgba(0,0,0,0.5); transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1); }
+    .video-thumb-preview:hover .video-play-btn { transform:scale(1.15); box-shadow:0 12px 30px rgba(0,0,0,0.7); }
+    .video-play-btn.btn-yt { background:linear-gradient(135deg,#CC0000,#FF3333); }
+    .video-play-btn.btn-tt { background:linear-gradient(135deg,#000000,#333333); border:1px solid rgba(255,255,255,0.25); }
+    .video-play-btn.btn-fb { background:linear-gradient(135deg,#1877F2,#42A1FF); }
+    .video-play-btn svg { width:22px; height:22px; fill:currentColor; margin-left:3px; }
+
+    .video-duration { position:absolute; bottom:12px; right:12px; z-index:2; font-size:0.72rem; font-weight:600; padding:0.22rem 0.55rem; border-radius:6px; background:rgba(0,0,0,0.8); color:#fff; backdrop-filter:blur(4px); letter-spacing:0.04em; }
+
+    .video-platform-badge { position:absolute; top:12px; left:12px; z-index:2; display:inline-flex; align-items:center; gap:0.4rem; padding:0.25rem 0.65rem; border-radius:50px; font-size:0.72rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; color:#fff; backdrop-filter:blur(6px); }
+    .badge-yt { background:rgba(204,0,0,0.88); box-shadow:0 2px 8px rgba(204,0,0,0.4); }
+    .badge-tt { background:rgba(18,18,18,0.88); border:1px solid rgba(255,255,255,0.2); box-shadow:0 2px 8px rgba(0,0,0,0.4); }
+    .badge-fb { background:rgba(24,119,242,0.88); box-shadow:0 2px 8px rgba(24,119,242,0.4); }
+
+    .video-body { padding:1.6rem 1.5rem; display:flex; flex-direction:column; flex:1; }
+    .video-category { font-size:0.75rem; color:var(--gold); font-weight:600; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.45rem; display:flex; align-items:center; gap:0.4rem; }
+    .video-category::before { content:'✦'; font-size:0.65rem; }
+    .video-title { font-family:'Cormorant Garamond',serif; font-size:1.35rem; font-weight:700; color:var(--text1); line-height:1.35; margin-bottom:0.6rem; }
+    .video-desc { font-size:0.875rem; color:var(--text2); line-height:1.65; margin-bottom:1.35rem; flex:1; }
+
+    .video-action-btn { display:inline-flex; align-items:center; justify-content:center; gap:0.5rem; padding:0.7rem 1.25rem; border-radius:50px; font-size:0.82rem; font-weight:600; letter-spacing:0.04em; transition:all 0.3s ease; text-decoration:none; margin-top:auto; }
+    .video-action-yt { background:rgba(204,0,0,0.08); color:#CC0000; border:1px solid rgba(204,0,0,0.25); }
+    .video-action-yt:hover { background:#CC0000; color:#fff; transform:translateY(-2px); box-shadow:0 6px 18px rgba(204,0,0,0.3); }
+    .video-action-tt { background:rgba(0,0,0,0.06); color:var(--text1); border:1px solid var(--border); }
+    [data-theme="dark"] .video-action-tt { background:rgba(255,255,255,0.06); }
+    .video-action-tt:hover { background:#000; color:#fff; transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,0.3); }
+    [data-theme="dark"] .video-action-tt:hover { background:#fff; color:#000; }
+    .video-action-fb { background:rgba(24,119,242,0.08); color:#1877F2; border:1px solid rgba(24,119,242,0.25); }
+    .video-action-fb:hover { background:#1877F2; color:#fff; transform:translateY(-2px); box-shadow:0 6px 18px rgba(24,119,242,0.3); }
 
     /* ============================================================ CONNECT */
     .connect-section { padding:6rem 0; background:var(--bg-connect); position:relative; overflow:hidden; transition:background 0.35s ease; }
@@ -273,6 +321,7 @@
     /* ============================================================ RESPONSIVE */
     @media (max-width:1024px) {
       .ayat-grid { grid-template-columns:repeat(2,1fr); }
+      .videos-grid { grid-template-columns:repeat(2,1fr); }
       .connect-grid { grid-template-columns:1fr; max-width:480px; margin:0 auto; }
       .about-grid { grid-template-columns:1fr; }
       .about-decor { display:none; }
@@ -281,6 +330,7 @@
       .nav-links,.nav-cta { display:none; }
       .hamburger { display:flex; }
       .ayat-grid { grid-template-columns:1fr; }
+      .videos-grid { grid-template-columns:1fr; max-width:460px; margin:0 auto; }
       .footer-grid { grid-template-columns:1fr; }
       .hero-stat-row { gap:1.25rem; padding:1rem 1.5rem; flex-wrap:wrap; }
       .hero-socials { flex-direction:column; align-items:center; }
@@ -321,6 +371,7 @@
       <div class="nav-links">
         <a href="#about" class="nav-link">About</a>
         <a href="#ayat" class="nav-link">Quranic Verses</a>
+        <a href="#videos" class="nav-link">Videos</a>
         <a href="#connect" class="nav-link">Channels</a>
       </div>
       <div class="nav-actions">
@@ -350,6 +401,7 @@
   <div class="mobile-menu" id="mobile-menu">
     <a href="#about">About</a>
     <a href="#ayat">Quranic Verses</a>
+    <a href="#videos">Videos</a>
     <a href="#connect">Channels</a>
   </div>
 </nav>
@@ -377,23 +429,16 @@
     <div class="hero-content">
       <div class="hero-pre">
         <div class="hero-dot"></div>
-        Islamic Scholar &amp; Professor
+        Authentic Islamic Knowledge &amp; Guidance
       </div>
 
-      <!-- Arabic verse -->
-      <div class="hero-arabic">وَيُعَلِّمُكُمُ الْعِلْمَ</div>
-
-      <!-- Name -->
+      <!-- Brand Name -->
       <h1 class="hero-name">
-        <span class="gold-text">Wasim</span> Faizi
+        <span class="gold-text">Wisdom</span>
       </h1>
 
-      <!-- Urdu name -->
-      <p class="hero-urdu" lang="ur">پروفیسر وسیم فیضی</p>
-
       <p class="hero-desc">
-        Dedicated to spreading authentic Islamic knowledge grounded in the Quran and authenticated Sunnah.
-        Follow Professor Wasim Faizi on your preferred platform.
+        An authentic Islamic platform dedicated to illuminating minds and hearts through the timeless teachings of the Noble Quran and the authenticated Sunnah.
       </p>
 
       <!-- Social Buttons -->
@@ -414,13 +459,13 @@
 
       <!-- Stats -->
       <div class="hero-stat-row">
-        <div class="hero-stat"><div class="stat-num">10K+</div><div class="stat-lbl">Followers</div></div>
+        <div class="hero-stat"><div class="stat-num">10K+</div><div class="stat-lbl">Community</div></div>
         <div class="stat-div"></div>
-        <div class="hero-stat"><div class="stat-num">500+</div><div class="stat-lbl">Lectures</div></div>
+        <div class="hero-stat"><div class="stat-num">500+</div><div class="stat-lbl">Lessons</div></div>
         <div class="stat-div"></div>
-        <div class="hero-stat"><div class="stat-num">3</div><div class="stat-lbl">Platforms</div></div>
+        <div class="hero-stat"><div class="stat-num">100%</div><div class="stat-lbl">Authentic</div></div>
         <div class="stat-div"></div>
-        <div class="hero-stat"><div class="stat-num">5+ yrs</div><div class="stat-lbl">Teaching</div></div>
+        <div class="hero-stat"><div class="stat-num">Daily</div><div class="stat-lbl">Reflections</div></div>
       </div>
     </div>
   </div>
@@ -466,38 +511,38 @@
       </div>
 
       <div class="about-content reveal">
-        <div class="section-label">About the Scholar</div>
-        <h2 class="about-title">Professor <span class="gold-text">Wasim Faizi</span></h2>
-        <p class="about-subtitle" lang="ur" style="font-family:'Amiri',serif; font-size:1.3rem; direction:rtl; text-align:right;">پروفیسر وسیم فیضی</p>
-        <p class="about-text">
-          Professor Wasim Faizi is an Islamic scholar, educator, and host of <strong>Seerat e Mustaqeem</strong>, dedicated to sharing authentic guidance from the Quran and Sunnah for everyday life.
+        <div class="section-label">Our Mission</div>
+        <h2 class="about-title">About <span class="gold-text">Wisdom</span></h2>
+        <p class="about-subtitle" lang="ar" style="font-family:'Amiri',serif; font-size:1.3rem; direction:rtl; text-align:right;">حكمة — مَنَصَّةُ الْعِلْمِ وَالْهُدَى</p>
+        <p class="about-text" style="font-size:0.98rem; color:var(--text2); line-height:1.85; margin:0.35rem 0 0.75rem;">
+          Wisdom (حكمة) is an authentic Islamic platform dedicated to sharing beneficial knowledge, Quranic reflections, and timeless spiritual guidance grounded in the Noble Quran and authenticated Sunnah.
         </p>
 
-        <!-- Scholar Intro Credentials -->
-        <div class="scholar-credentials">
+        <!-- Core Pillars -->
+        <div class="pillars-grid">
           <div class="cred-item">
-            <span class="cred-en">Islamic Scholar</span>
-            <span class="cred-ur" lang="ur">اسلامی عالم</span>
+            <span class="cred-en">Quran &amp; Sunnah</span>
+            <span class="cred-ur" lang="ar">الْقُرْآنُ وَالسُّنَّةُ</span>
           </div>
           <div class="cred-item">
-            <span class="cred-en">Visiting University Professor</span>
-            <span class="cred-ur" lang="ur">وزیٹنگ یونیورسٹی پروفیسر</span>
+            <span class="cred-en">Authentic Knowledge</span>
+            <span class="cred-ur" lang="ar">الْعِلْمُ النَّافِعُ</span>
           </div>
           <div class="cred-item">
-            <span class="cred-en">Islamic Motivational Speaker</span>
-            <span class="cred-ur" lang="ur">اسلامی تحریکی مقرر</span>
+            <span class="cred-en">Spiritual Guidance</span>
+            <span class="cred-ur" lang="ar">التَّزْكِيَةُ وَالْإِيمَانُ</span>
           </div>
           <div class="cred-item">
-            <span class="cred-en">Spiritual Mentor</span>
-            <span class="cred-ur" lang="ur">روحانی رہنما</span>
+            <span class="cred-en">Daily Reflections</span>
+            <span class="cred-ur" lang="ar">تَدَبُّرٌ وَذِكْرٌ</span>
           </div>
           <div class="cred-item">
-            <span class="cred-en">Host Seerat e Mustaqeem</span>
-            <span class="cred-ur" lang="ur">میزبان — سیرت مستقیم</span>
+            <span class="cred-en">Practical Guidance</span>
+            <span class="cred-ur" lang="ar">فِقْهُ الْحَيَاةِ</span>
           </div>
           <div class="cred-item">
-            <span class="cred-en">Islamic Author</span>
-            <span class="cred-ur" lang="ur">اسلامی مصنف</span>
+            <span class="cred-en">Moral Excellence</span>
+            <span class="cred-ur" lang="ar">حُسْنُ الْأَخْلَاقِ</span>
           </div>
         </div>
 
@@ -580,14 +625,110 @@
   </div>
 </section>
 
+<!-- ============================================================ VIDEOS -->
+<section class="videos-section" id="videos">
+  <div class="star-pattern"></div>
+  <div class="container">
+    <div class="videos-header reveal">
+      <div class="section-label">Media &amp; Reminders</div>
+      <h2 class="section-title">Latest <span class="gold-text">Videos &amp; Lessons</span></h2>
+      <p class="section-sub">Watch the newest Islamic lectures, spiritual reflections, and short reminders from our official platforms.</p>
+    </div>
+
+    <!-- ============================================================
+         TIP FOR UPDATING VIDEOS:
+         Replace the video links and titles below with your latest uploads.
+         For YouTube, you can also embed an iframe directly inside .video-media-wrap.
+    ============================================================ -->
+    <div class="videos-grid">
+
+      <!-- 1 — YouTube Video Card -->
+      <div class="video-card reveal">
+        <div class="video-media-wrap">
+          <a href="https://www.youtube.com/@wasimfaizi-c4e" target="_blank" rel="noopener noreferrer" class="video-thumb-preview video-bg-yt" aria-label="Watch latest YouTube lesson">
+            <div class="video-platform-badge badge-yt">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+              YouTube
+            </div>
+            <div class="video-play-btn btn-yt" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"></polygon></svg>
+            </div>
+            <div class="video-duration">Full Lesson</div>
+          </a>
+        </div>
+        <div class="video-body">
+          <div class="video-category">Tafsir &amp; Tadabbur</div>
+          <h3 class="video-title">سجدة اور شکر — Reflections on Sajdah &amp; Gratitude</h3>
+          <p class="video-desc">A deep exploration of the inner spiritual reality of prostration, humility before Allah, and expressing true gratitude through continuous prayer.</p>
+          <a href="https://www.youtube.com/@wasimfaizi-c4e" target="_blank" rel="noopener noreferrer" class="video-action-btn video-action-yt">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+            Watch on YouTube
+          </a>
+        </div>
+      </div>
+
+      <!-- 2 — TikTok Video Card -->
+      <div class="video-card reveal">
+        <div class="video-media-wrap">
+          <a href="https://www.tiktok.com/@roshniff85?_r=1&amp;_t=ZS-9ABletBOSbU" target="_blank" rel="noopener noreferrer" class="video-thumb-preview video-bg-tt" aria-label="Watch latest TikTok short reminder">
+            <div class="video-platform-badge badge-tt">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.19a8.18 8.18 0 0 0 4.78 1.52V6.27a4.85 4.85 0 0 1-1.01-.42V6.7z"/></svg>
+              TikTok
+            </div>
+            <div class="video-play-btn btn-tt" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"></polygon></svg>
+            </div>
+            <div class="video-duration">0:58 · Reel</div>
+          </a>
+        </div>
+        <div class="video-body">
+          <div class="video-category">Daily Dhikr &amp; Morals</div>
+          <h3 class="video-title">نیکی اور حسن اخلاق — Daily Good Deeds &amp; Patience</h3>
+          <p class="video-desc">Short, powerful reminders on keeping the tongue moist with the remembrance of Allah and cultivating noble character in everyday trials.</p>
+          <a href="https://www.tiktok.com/@roshniff85?_r=1&amp;_t=ZS-9ABletBOSbU" target="_blank" rel="noopener noreferrer" class="video-action-btn video-action-tt">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.19a8.18 8.18 0 0 0 4.78 1.52V6.27a4.85 4.85 0 0 1-1.01-.42V6.7z"/></svg>
+            Watch on TikTok
+          </a>
+        </div>
+      </div>
+
+      <!-- 3 — Facebook Video Card -->
+      <div class="video-card reveal">
+        <div class="video-media-wrap">
+          <a href="https://www.facebook.com/share/19seKWWno7/" target="_blank" rel="noopener noreferrer" class="video-thumb-preview video-bg-fb" aria-label="Watch latest Facebook video reflection">
+            <div class="video-platform-badge badge-fb">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              Facebook
+            </div>
+            <div class="video-play-btn btn-fb" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"></polygon></svg>
+            </div>
+            <div class="video-duration">14:20 · Reflection</div>
+          </a>
+        </div>
+        <div class="video-body">
+          <div class="video-category">Spiritual Guidance</div>
+          <h3 class="video-title">طلب العلم فريضة — The Path of Seeking Knowledge</h3>
+          <p class="video-desc">An insightful reflection on why seeking authentic Islamic knowledge purifies the heart, sharpens wisdom, and illuminates the believer's worldly path.</p>
+          <a href="https://www.facebook.com/share/19seKWWno7/" target="_blank" rel="noopener noreferrer" class="video-action-btn video-action-fb">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Watch on Facebook
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ============================================================ CONNECT -->
 <section class="connect-section" id="connect">
   <div class="star-pattern"></div>
   <div class="container">
     <div class="connect-header reveal">
       <div class="section-label">Stay Connected</div>
-      <h2 class="section-title">Follow <span class="gold-text">Professor Wasim Faizi</span></h2>
-      <p style="font-size:1rem; color:var(--text2); margin-top:0.5rem;">Choose your platform and never miss a lesson, reminder, or lecture.</p>
+      <h2 class="section-title">Follow <span class="gold-text">Wisdom</span></h2>
+      <p style="font-size:1rem; color:var(--text2); margin-top:0.5rem;">Join our platforms to never miss authentic reminders, lectures, and reflections.</p>
     </div>
 
     <div class="connect-grid">
@@ -596,8 +737,8 @@
           <svg viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
         </div>
         <div class="ch-name">YouTube</div>
-        <div class="ch-handle">@wasimfaizi-c4e</div>
-        <p class="ch-desc">Full-length lectures, Tafsir series, Seerat e Mustaqeem episodes, and Islamic reminders.</p>
+        <div class="ch-handle">Wisdom — حكمة</div>
+        <p class="ch-desc">Full-length Islamic lessons, Tafsir series, and authentic reminders.</p>
         <a href="https://www.youtube.com/@wasimfaizi-c4e" target="_blank" rel="noopener noreferrer" class="ch-btn" id="subscribe-youtube">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
           Subscribe
@@ -612,7 +753,7 @@
         <div class="ch-handle">@roshniff85</div>
         <p class="ch-desc">Short Islamic reminders, daily Dhikr, Quranic reflections — perfect for learning on the go.</p>
         <a href="https://www.tiktok.com/@roshniff85?_r=1&amp;_t=ZS-9ABletBOSbU" target="_blank" rel="noopener noreferrer" class="ch-btn" id="follow-tiktok">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.19a8.18 8.18 0 0 0 4.78 1.52V6.27a4.85 4.85 0 0 1-1.01-.42V6.7z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.19a8.18 8.18 0 0 0 4.78 1.52V6.27a4.85 4.85 0 0 1-1.01-.42V6.7z"/></svg>
           Follow
         </a>
       </div>
@@ -622,8 +763,8 @@
           <svg viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
         </div>
         <div class="ch-name">Facebook</div>
-        <div class="ch-handle">Wasim Faizi</div>
-        <p class="ch-desc">Live sessions, community discussions, event announcements, and Islamic content shared regularly.</p>
+        <div class="ch-handle">Wisdom — حكمة</div>
+        <p class="ch-desc">Daily posts, Quranic reflections, and Islamic community updates shared regularly.</p>
         <a href="https://www.facebook.com/share/19seKWWno7/" target="_blank" rel="noopener noreferrer" class="ch-btn" id="like-facebook">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
           Like Page
@@ -653,7 +794,7 @@
             <div class="brand-sub">حكمة</div>
           </div>
         </a>
-        <p class="footer-tagline">Authentic Islamic knowledge through the teachings of Professor Wasim Faizi — grounded in Quran and Sunnah.</p>
+        <p class="footer-tagline">Authentic Islamic knowledge, Quranic reflections, and timeless guidance — grounded in the Quran and Sunnah.</p>
         <div class="footer-arabic">طَلَبُ الْعِلْمِ فَرِيضَةٌ</div>
         <div class="footer-socials">
           <a href="https://www.youtube.com/@wasimfaizi-c4e" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="YouTube">
@@ -670,8 +811,9 @@
       <div>
         <div class="footer-col-title">Quick Links</div>
         <div class="footer-links">
-          <a href="#about" class="footer-link">About Professor Wasim Faizi</a>
+          <a href="#about" class="footer-link">About Wisdom</a>
           <a href="#ayat" class="footer-link">Quranic Verses</a>
+          <a href="#videos" class="footer-link">Latest Videos</a>
           <a href="https://www.youtube.com/@wasimfaizi-c4e" target="_blank" class="footer-link">YouTube Channel</a>
           <a href="https://www.tiktok.com/@roshniff85?_r=1&amp;_t=ZS-9ABletBOSbU" target="_blank" class="footer-link">TikTok Page</a>
           <a href="https://www.facebook.com/share/19seKWWno7/" target="_blank" class="footer-link">Facebook Page</a>
@@ -679,7 +821,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 <span>Wisdom — حكمة</span> · Professor Wasim Faizi · All rights reserved</p>
+      <p>© 2025 <span>Wisdom — حكمة</span> · All rights reserved</p>
     </div>
   </div>
 </footer>
